@@ -20,3 +20,9 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
