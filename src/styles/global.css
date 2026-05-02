@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@theme {
+  --color-navy: #1a2d5c;
+  --color-navy-soft: #2a3d6c;
+  --color-green: #3d7a3d;
+  --color-green-soft: #4d8a4d;
+  --color-wave: #3d8ec9;
+  --color-cream: #f5f1e8;
+  --color-cream-soft: #faf7f0;
+  --color-stone: #6b6862;
+  --color-white: #ffffff;
+
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}

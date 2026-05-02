@@ -1,0 +1,60 @@
+---
+---
+
+<footer class="bg-cream-soft text-navy">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+      <div>
+        <p class="font-serif text-base font-semibold tracking-widest uppercase mb-3">
+          Copes&rsquo; Islander
+        </p>
+        <p class="text-sm text-stone leading-relaxed">
+          Oceanfront vacation rental, Comox Valley, British Columbia
+        </p>
+      </div>
+
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wider text-stone mb-3">Contact</p>
+        {/* TODO: replace placeholder contact info before launch */}
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="mailto:hello@copesislander.com" class="hover:text-green transition-colors">
+              hello@copesislander.com
+            </a>
+          </li>
+          <li>
+            <a href="tel:+12505550000" class="hover:text-green transition-colors">
+              (250) 555-0000
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wider text-stone mb-3">Quick Links</p>
+        <ul class="space-y-2 text-sm">
+          {[
+            { label: 'Home', href: '/' },
+            { label: 'Rates & Accommodations', href: '/suite' },
+            { label: 'Gallery', href: '/gallery' },
+            { label: 'Contact', href: '/contact' },
+          ].map((link) => (
+            <li>
+              <a href={link.href} class="hover:text-green transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="border-t border-navy/10">
+    <p class="text-center text-xs text-stone py-4">
+      &copy; 2026 Copes&rsquo; Islander. Comox, BC.
+    </p>
+  </div>
+</footer>

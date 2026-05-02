@@ -1,0 +1,93 @@
+---
+const pathname = Astro.url.pathname;
+
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Rates & Accommodations', href: '/suite' },
+  { label: 'The Location', href: '/location' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Contact', href: '/contact' },
+];
+---
+
+<header class="sticky top-0 z-50 backdrop-blur-sm bg-cream/70 border-b border-navy/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+    {/* DEV ONLY: image served from /dev/ symlink to gitignored dev-assets/. Replace with proper SVG before any deploy. */}
+    <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+      <img src="/dev/Logo.jpg" alt="Copes' Islander" class="h-16 w-auto" />
+      <span class="font-serif text-base font-semibold tracking-widest text-navy uppercase">
+        Copes&rsquo; Islander
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class={pathname === link.href
+            ? 'text-sm font-medium text-navy border-b-2 border-navy pb-0.5'
+            : 'text-sm font-medium text-stone hover:text-navy transition-colors'
+          }
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href="/contact"
+        class="ml-2 px-4 py-2 bg-green text-white text-sm font-medium rounded-full hover:bg-green-soft transition-colors"
+      >
+        Inquire
+      </a>
+    </nav>
+
+    <button id="menu-btn" class="md:hidden text-navy p-2 -mr-2" aria-label="Toggle menu">
+      <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+      <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="hidden" aria-hidden="true">
+        <line x1="3" y1="3" x2="21" y2="21" />
+        <line x1="21" y1="3" x2="3" y2="21" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+<div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-cream pt-20 px-8 flex flex-col">
+  <nav class="flex flex-col gap-6">
+    {navLinks.map((link) => (
+      <a
+        href={link.href}
+        class={pathname === link.href
+          ? 'text-xl font-medium text-navy'
+          : 'text-xl font-medium text-stone hover:text-navy transition-colors'
+        }
+      >
+        {link.label}
+      </a>
+    ))}
+  </nav>
+  <div class="mt-auto pb-12">
+    <a
+      href="/contact"
+      class="block text-center px-6 py-3 bg-green text-white text-base font-medium rounded-full hover:bg-green-soft transition-colors"
+    >
+      Inquire
+    </a>
+  </div>
+</div>
+
+<script>
+  const btn = document.getElementById('menu-btn')!;
+  const menu = document.getElementById('mobile-menu')!;
+  const iconOpen = document.getElementById('icon-open')!;
+  const iconClose = document.getElementById('icon-close')!;
+
+  btn.addEventListener('click', () => {
+    const isHidden = menu.classList.toggle('hidden');
+    iconOpen.classList.toggle('hidden', !isHidden);
+    iconClose.classList.toggle('hidden', isHidden);
+    document.body.classList.toggle('overflow-hidden', !isHidden);
+  });
+</script>

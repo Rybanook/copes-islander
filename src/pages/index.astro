@@ -1,17 +1,92 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  title="Copes' Islander — Oceanfront Vacation Rental, Comox Valley BC"
+  description="Copes' Islander is an oceanfront vacation rental on Vancouver Island, Comox Valley, BC. Inquire to book your stay."
+>
+  {/* DEV ONLY: hero uses real property photo from gitignored dev-assets/. Will be replaced with professional photography from upcoming shoot. */}
+  <section
+    class="relative flex items-center justify-center min-h-[85vh] overflow-hidden"
+    style="background-image: url('/dev/bluesky_water_grass.JPG'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/15 to-black/50"></div>
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <h1 class="font-serif font-light tracking-[0.08em] text-white leading-[1.1]">
+        <span class="block text-4xl md:text-6xl lg:text-7xl">DISCOVER PURE</span>
+        <span class="block text-4xl md:text-6xl lg:text-7xl">COASTAL TRANQUILITY</span>
+      </h1>
+      <p class="font-sans text-base md:text-lg text-white/85 mt-6 mb-12 tracking-wide">
+        Oceanfront sanctuary on Vancouver Island
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/suite"
+          class="px-10 py-4 border border-white/70 text-white text-sm font-medium tracking-[0.15em] uppercase hover:bg-white hover:text-navy transition-colors"
+        >
+          Rates
+        </a>
+        <a
+          href="/contact"
+          class="px-10 py-4 border border-white/70 text-white text-sm font-medium tracking-[0.15em] uppercase hover:bg-white hover:text-navy transition-colors"
+        >
+          Inquire
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* DEV ONLY: card photos use real property photos from gitignored dev-assets/. */}
+  <section class="bg-cream py-32 px-4">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center mb-20">
+        <p class="text-xs font-semibold tracking-[0.25em] text-green uppercase mb-4">
+          The Property
+        </p>
+        <h2 class="font-serif font-light text-3xl md:text-5xl text-navy tracking-tight leading-[1.15] max-w-3xl mx-auto">
+          Where the strait meets the shore
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+
+        {/* Block 1: BBQ patio */}
+        <div>
+          <img
+            src="/dev/BBQ.JPG"
+            alt="Oceanside patio with BBQ overlooking the strait"
+            class="w-full aspect-[4/3] object-cover mb-6"
+          />
+          <p class="text-xs font-semibold tracking-[0.2em] text-green uppercase mb-3">
+            Oceanside Patio
+          </p>
+          <p class="font-serif text-lg text-navy leading-relaxed">
+            Grill dinner with the strait at your back and the Coast Mountains in view.
+          </p>
+        </div>
+
+        {/* Block 2: Twilight property shot */}
+        <div>
+          <img
+            src="/dev/twilight_sky.JPG"
+            alt="Sunset light across the suite, deck, and shoreline"
+            class="w-full aspect-[4/3] object-cover mb-6"
+          />
+          <p class="text-xs font-semibold tracking-[0.2em] text-green uppercase mb-3">
+            Golden Hour Every Evening
+          </p>
+          <p class="font-serif text-lg text-navy leading-relaxed">
+            Sunset light spills across the suite, the deck, and the strait below.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-32 text-center">
+    <p class="text-stone text-lg">More coming soon</p>
+  </section>
+</Layout>
