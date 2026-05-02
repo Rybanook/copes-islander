@@ -8,85 +8,131 @@ import Layout from '../layouts/Layout.astro';
 >
   {/* DEV ONLY: hero uses real property photo from gitignored dev-assets/. Will be replaced with professional photography from upcoming shoot. */}
   <section
-    class="relative flex items-center justify-center min-h-[85vh] overflow-hidden"
-    style="background-image: url('/dev/bluesky_water_grass.JPG'); background-size: cover; background-position: center;"
+    class="relative flex items-center justify-center min-h-[80vh] overflow-hidden"
+    style="background-image: url('/dev/IMG_0284.JPG'); background-size: cover; background-position: center;"
   >
-    <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/15 to-black/50"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/5 via-black/15 to-black/45"></div>
     <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-      <h1 class="font-serif font-light tracking-[0.08em] text-white leading-[1.1]">
-        <span class="block text-4xl md:text-6xl lg:text-7xl">DISCOVER PURE</span>
-        <span class="block text-4xl md:text-6xl lg:text-7xl">COASTAL TRANQUILITY</span>
+      <h1 class="font-serif text-6xl md:text-7xl tracking-tight text-cream-warm leading-[1.1]">
+        Oceanfront. The Comox Valley way.
       </h1>
-      <p class="font-sans text-base md:text-lg text-white/85 mt-6 mb-12 tracking-wide">
-        Oceanfront sanctuary on Vancouver Island
+      <p class="font-sans text-lg md:text-xl text-cream-warm/90 mt-6">
+        A real oceanfront rental in the Comox Valley. Two bedrooms, full kitchen, private beach access.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
         <a
           href="/suite"
-          class="px-10 py-4 border border-white/70 text-white text-sm font-medium tracking-[0.15em] uppercase hover:bg-white hover:text-navy transition-colors"
+          class="px-8 py-3 bg-rust text-white font-medium rounded-full hover:bg-rust-soft transition-colors"
         >
-          Rates
+          See rates
         </a>
         <a
           href="/contact"
-          class="px-10 py-4 border border-white/70 text-white text-sm font-medium tracking-[0.15em] uppercase hover:bg-white hover:text-navy transition-colors"
+          class="px-8 py-3 bg-white/90 text-navy font-medium rounded-full hover:bg-white transition-colors"
         >
-          Inquire
+          Get in touch
         </a>
       </div>
     </div>
   </section>
 
   {/* DEV ONLY: card photos use real property photos from gitignored dev-assets/. */}
-  <section class="bg-cream py-32 px-4">
+  <section class="bg-cream py-24 px-4">
     <div class="max-w-6xl mx-auto">
 
-      <div class="text-center mb-20">
-        <p class="text-xs font-semibold tracking-[0.25em] text-green uppercase mb-4">
-          The Property
+      <!-- Section header (centered, above two-column layout) -->
+      <div class="text-center mb-16">
+        <p class="text-sm font-medium tracking-wider text-rust uppercase">
+          AROUND THE PROPERTY
         </p>
-        <h2 class="font-serif font-light text-3xl md:text-5xl text-navy tracking-tight leading-[1.15] max-w-3xl mx-auto">
-          Where the strait meets the shore
+        <h2 class="font-serif text-3xl md:text-4xl text-navy tracking-tight mt-3">
+          A few moments from the place
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+      <!-- Two-column composition: hosts left (larger), polaroids right (smaller) -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-x-12 gap-y-12 items-start">
 
-        {/* Block 1: Steps to the beach */}
-        <div>
-          <img
-            src="/dev/steps_to_beach.JPG"
-            alt="Stone steps from the deck down to the rocky beach"
-            class="w-full aspect-[4/3] object-cover mb-6"
-          />
-          <p class="text-xs font-semibold tracking-[0.2em] text-green uppercase mb-3">
-            Steps to the Beach
-          </p>
-          <p class="font-serif text-lg text-navy leading-relaxed">
-            The shoreline begins at your back door.
-          </p>
+        <!-- LEFT COLUMN: hosts placeholder + paragraph (md:col-span-7) -->
+        <div class="md:col-span-7 space-y-8">
+
+          <!-- Big hosts placeholder polaroid -->
+          <div class="bg-white p-3 pb-12 shadow-lg rotate-[-1deg] max-w-md mx-auto">
+            <div class="w-full aspect-[4/5] bg-cream-warm border-2 border-dashed border-stone/40 flex items-center justify-center">
+              <div class="text-center px-6">
+                <p class="font-sans text-xs tracking-widest text-stone uppercase mb-2">Placeholder</p>
+                <p class="font-serif italic text-lg text-stone">Mike &amp; Patti<br/>photo coming soon</p>
+              </div>
+            </div>
+            <p class="font-serif italic text-sm text-stone text-center mt-4">your hosts</p>
+          </div>
+
+          <!-- Hosts paragraph -->
+          <div class="max-w-md mx-auto px-2">
+            <p class="font-serif italic text-lg text-navy leading-relaxed">
+              We&rsquo;re Mike and Patti &mdash; hosts at Copes&rsquo; Islander since 1996. The day jobs are behind us, the kids are grown and gone, but we&rsquo;re still here on the strait. Welcoming guests from around the world has been a pleasure we&rsquo;ve never tired of.
+            </p>
+          </div>
+
         </div>
 
-        {/* Block 2: Twilight property shot */}
-        <div>
-          <img
-            src="/dev/twilight_sky.JPG"
-            alt="Sunset light across the suite, deck, and shoreline"
-            class="w-full aspect-[4/3] object-cover mb-6"
-          />
-          <p class="text-xs font-semibold tracking-[0.2em] text-green uppercase mb-3">
-            Golden Hour Every Evening
-          </p>
-          <p class="font-serif text-lg text-navy leading-relaxed">
-            Sunset light spills across the suite, the deck, and the strait below.
-          </p>
+        <!-- RIGHT COLUMN: 2x2 polaroid grid (md:col-span-5) -->
+        <div class="md:col-span-5">
+          <div class="grid grid-cols-2 gap-4">
+
+            <div class="bg-white p-2 pb-8 shadow-md rotate-[-1deg]">
+              <img src="/dev/IMG_0278.JPG" alt="The exterior of the property" class="w-full aspect-[1/1] object-cover" />
+              <p class="font-serif italic text-xs text-stone text-center mt-3">the place itself</p>
+            </div>
+
+            <div class="bg-white p-2 pb-8 shadow-md rotate-[1deg]">
+              <img src="/dev/steps_to_beach.JPG" alt="Stone steps from the deck down to the rocky beach" class="w-full aspect-[1/1] object-cover" />
+              <p class="font-serif italic text-xs text-stone text-center mt-3">down to the water</p>
+            </div>
+
+            <div class="bg-white p-2 pb-8 shadow-md rotate-[1deg]">
+              <img src="/dev/twilight_sky.JPG" alt="Twilight sky over the property and shoreline" class="w-full aspect-[1/1] object-cover" />
+              <p class="font-serif italic text-xs text-stone text-center mt-3">sky show, every night</p>
+            </div>
+
+            <div class="bg-white p-2 pb-8 shadow-md rotate-[-1deg]">
+              <img src="/dev/corner_window.JPG" alt="View from the corner window of the suite" class="w-full aspect-[1/1] object-cover" />
+              <p class="font-serif italic text-xs text-stone text-center mt-3">the view from the couch</p>
+            </div>
+
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <section class="py-32 text-center">
-    <p class="text-stone text-lg">More coming soon</p>
+  <section class="bg-white py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-sm font-medium tracking-wider text-rust uppercase mb-3">
+        WHERE WE ARE
+      </p>
+      <h2 class="font-serif text-2xl md:text-3xl text-navy tracking-tight mb-12">
+        A few minutes from the ferry, the winery, and the strait
+      </h2>
+      <div class="max-w-2xl mx-auto">
+        <img
+          src="/dev/map.PNG"
+          alt="Illustrated map showing Cope's Islander on the Strait of Georgia, near BC Ferries Little River Terminal and 40 Knots Winery"
+          class="w-full max-h-[500px] object-contain border-4 border-cream-warm shadow-md"
+        />
+        <p class="font-sans text-sm text-stone italic text-center mt-4">
+          Just off Wilkinson Road in the Comox Valley.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cream-warm py-20 px-4">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="font-serif italic text-lg md:text-xl text-navy leading-relaxed">
+        Step off the deck and onto the beach. Watch the Powell River ferry come in. Dig clams at low tide; paddle a canoe at high. Salmon jump within feet of the shore. Evening sunsets are followed by starlit nights and a passing parade of cruise ships plying the waters of Georgia Strait on their way to Alaska.
+      </p>
+    </div>
   </section>
 </Layout>
