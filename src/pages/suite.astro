@@ -1,0 +1,235 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Rates & Accommodations — Copes' Islander">
+
+  {/* DEV ONLY: photos served via /dev/ symlink to gitignored dev-assets/. */}
+  <section
+    class="relative flex items-center min-h-[60vh] pt-32 overflow-hidden"
+    style="background-image: url('/dev/livingroom.JPG'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-gradient-to-r from-black/55 via-black/35 to-black/15"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 md:px-12 w-full">
+      <div class="max-w-xl">
+        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-cream-warm leading-tight tracking-tight">
+          Stay by the Sea<br/>in Comfort &amp; Privacy
+        </h1>
+        <p class="font-sans text-base md:text-lg text-cream-warm/90 mt-6 leading-relaxed">
+          The Sea Lion Suite is a private oceanfront retreat with a full kitchen, living room, one bedroom, and Strait of Georgia views.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mt-8">
+          <a href="#rates" class="px-8 py-3 bg-rust text-white font-medium rounded-full hover:bg-rust-soft transition-colors text-center">
+            View rates
+          </a>
+          <a href="/contact" class="px-8 py-3 bg-white/90 text-navy font-medium rounded-full hover:bg-white transition-colors text-center">
+            Inquire to book
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cream py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10 items-start">
+
+        <div>
+          <h2 class="font-serif text-3xl md:text-4xl text-navy tracking-tight">
+            The Sea Lion Suite
+          </h2>
+          <p class="font-sans text-base text-stone leading-relaxed mt-4">
+            A private suite for couples, solo travelers, or small families looking for quiet oceanfront comfort.
+          </p>
+
+          <div class="mt-8 grid grid-cols-2 gap-x-4 gap-y-4">
+            <div class="amenity-row flex items-center gap-3">
+              <span class="w-6 h-6 inline-block flex-shrink-0">{/* icon: bed */}</span>
+              <span class="font-sans text-sm text-navy">1 Private Bedroom</span>
+            </div>
+            <div class="amenity-row flex items-center gap-3">
+              <span class="w-6 h-6 inline-block flex-shrink-0">{/* icon: door */}</span>
+              <span class="font-sans text-sm text-navy">Ground Floor, Easy Access</span>
+            </div>
+            <div class="amenity-row flex items-center gap-3">
+              <span class="w-6 h-6 inline-block flex-shrink-0">{/* icon: kitchen */}</span>
+              <span class="font-sans text-sm text-navy">Full Kitchen</span>
+            </div>
+            <div class="amenity-row flex items-center gap-3">
+              <span class="w-6 h-6 inline-block flex-shrink-0">{/* icon: wave */}</span>
+              <span class="font-sans text-sm text-navy">Beachfront, Steps from Shore</span>
+            </div>
+            <div class="amenity-row flex items-center gap-3">
+              <span class="w-6 h-6 inline-block flex-shrink-0">{/* icon: sofa */}</span>
+              <span class="font-sans text-sm text-navy">Living Room with Ocean Views</span>
+            </div>
+            <div class="amenity-row flex items-center gap-3">
+              <span class="w-6 h-6 inline-block flex-shrink-0">{/* icon: wifi */}</span>
+              <span class="font-sans text-sm text-navy">WiFi</span>
+            </div>
+            <div class="amenity-row flex items-center gap-3">
+              <span class="w-6 h-6 inline-block flex-shrink-0">{/* icon: bathroom */}</span>
+              <span class="font-sans text-sm text-navy">Private Bathroom</span>
+            </div>
+            <div class="amenity-row flex items-center gap-3">
+              <span class="w-6 h-6 inline-block flex-shrink-0">{/* icon: parking */}</span>
+              <span class="font-sans text-sm text-navy">Parking</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img src="/dev/livingroom.JPG" alt="Living room with corner windows and ocean view" class="w-full aspect-[16/10] object-cover rounded-lg shadow-md" />
+
+          <div class="grid grid-cols-3 gap-4 mt-4">
+            <img src="/dev/IMG_0234.JPG" alt="Full kitchen with knotty pine cabinets and stainless appliances" class="w-full aspect-[4/3] max-h-[200px] object-cover rounded-lg shadow-sm" />
+            <img src="/dev/bedroom.JPG" alt="Private bedroom with king bed" class="w-full aspect-[4/3] max-h-[200px] object-cover rounded-lg shadow-sm" />
+            <div class="w-full aspect-[4/3] max-h-[200px] bg-cream-warm border-2 border-dashed border-stone/40 rounded-lg flex items-center justify-center shadow-sm">
+              <div class="text-center px-3">
+                <p class="font-sans text-[10px] tracking-widest text-stone uppercase mb-1">Placeholder</p>
+                <p class="font-serif italic text-sm text-stone leading-tight">bathroom photo<br/>coming soon</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="rates" class="bg-cream-warm py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+
+      <h2 class="font-serif text-3xl md:text-4xl text-navy tracking-tight text-center mb-12">
+        Rates
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div class="bg-white p-8 text-center shadow-sm">
+          <p class="font-sans text-xs tracking-widest text-rust uppercase mb-4">Standard Stay</p>
+          <p class="font-serif text-4xl text-navy">$295<span class="text-lg text-stone"> / night</span></p>
+          <p class="font-sans text-sm text-stone mt-3">2 night minimum</p>
+        </div>
+
+        <div class="bg-white p-8 text-center shadow-sm">
+          <p class="font-sans text-xs tracking-widest text-rust uppercase mb-4">Weekly Escape</p>
+          <p class="font-serif text-4xl text-navy">$1,950<span class="text-lg text-stone"> / week</span></p>
+          <p class="font-sans text-sm text-stone mt-3">Best value for longer stays</p>
+        </div>
+
+        <div class="bg-white p-8 text-center shadow-sm">
+          <p class="font-sans text-xs tracking-widest text-rust uppercase mb-4">Seasonal Rates</p>
+          <p class="font-serif text-xl text-navy mt-4 leading-snug">Rates may vary during<br/>summer and holidays</p>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/contact" class="inline-block px-8 py-3 bg-rust text-white font-medium rounded-full hover:bg-rust-soft transition-colors">
+          Inquire for availability
+        </a>
+        <p class="font-sans text-xs text-stone italic mt-4">
+          Rates in CAD. Taxes not included. Rates shown are placeholder; final rates confirmed at inquiry.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="bg-cream py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+        <div>
+          <img src="/dev/bedroom.JPG" alt="Bedroom of the Sea Lion Suite" class="w-full aspect-[4/3] object-cover shadow-md" />
+        </div>
+
+        <div>
+          <h2 class="font-serif text-2xl md:text-3xl text-navy tracking-tight">
+            Traveling with family or friends?
+          </h2>
+          <p class="font-sans text-base text-stone leading-relaxed mt-4">
+            For larger groups, two additional upstairs bedrooms and a shared bathroom may be available upon request.
+          </p>
+
+          <p class="font-sans text-sm font-medium text-navy mt-6">Perfect for:</p>
+          <ul class="mt-2 space-y-1 font-sans text-sm text-stone list-disc list-inside">
+            <li>Families</li>
+            <li>Couples traveling together</li>
+            <li>Wedding guests</li>
+            <li>Multi-generational stays</li>
+          </ul>
+
+          <p class="font-sans text-sm italic text-stone mt-6">
+            Availability depends on dates and host approval.
+          </p>
+
+          <a href="/contact" class="inline-block mt-6 px-8 py-3 bg-rust text-white font-medium rounded-full hover:bg-rust-soft transition-colors">
+            Ask about additional rooms
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cream-warm py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+
+      <h2 class="font-serif text-2xl md:text-3xl text-navy tracking-tight text-center mb-10">
+        A Glimpse of Your Stay
+      </h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+        <img src="/dev/twilight_sky.JPG" alt="Twilight sky over the property" class="w-full aspect-[4/5] object-cover rounded-lg shadow-sm" />
+        <img src="/dev/pink_sunset.JPG" alt="Pink sunset over the strait" class="w-full aspect-[4/5] object-cover rounded-lg shadow-sm" />
+        <img src="/dev/corner_window.JPG" alt="View from the corner window" class="w-full aspect-[4/5] object-cover rounded-lg shadow-sm" />
+        <img src="/dev/bluesky_water_grass.JPG" alt="Beach grass and ocean view" class="w-full aspect-[4/5] object-cover rounded-lg shadow-sm" />
+        <img src="/dev/IMG_0284.JPG" alt="The property at golden hour" class="w-full aspect-[4/5] object-cover rounded-lg shadow-sm" />
+      </div>
+
+    </div>
+  </section>
+
+  <section class="bg-cream py-12 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+
+        <div>
+          <p class="font-sans text-xs tracking-widest text-rust uppercase mb-2">Check In</p>
+          <p class="font-sans text-sm text-navy">After 4 PM</p>
+        </div>
+        <div>
+          <p class="font-sans text-xs tracking-widest text-rust uppercase mb-2">Check Out</p>
+          <p class="font-sans text-sm text-navy">By 11 AM</p>
+        </div>
+        <div>
+          <p class="font-sans text-xs tracking-widest text-rust uppercase mb-2">Pets</p>
+          <p class="font-sans text-sm text-navy">Upon request</p>
+        </div>
+        <div>
+          <p class="font-sans text-xs tracking-widest text-rust uppercase mb-2">Smoking</p>
+          <p class="font-sans text-sm text-navy">No smoking</p>
+        </div>
+        <div>
+          <p class="font-sans text-xs tracking-widest text-rust uppercase mb-2">WiFi</p>
+          <p class="font-sans text-sm text-navy">Complimentary</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cream-warm py-12 px-4">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <p class="font-serif italic text-lg md:text-xl text-navy text-center md:text-left">
+        Have questions or ready to book your coastal escape?
+      </p>
+      <a href="/contact" class="px-8 py-3 bg-rust text-white font-medium rounded-full hover:bg-rust-soft transition-colors whitespace-nowrap">
+        Inquire now
+      </a>
+    </div>
+  </section>
+
+</Layout>
