@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact — Copes' Islander"
+  description="Get in touch with Mike and Patti about staying at Copes' Islander, an oceanfront vacation rental in the Comox Valley, BC."
+>
+
+  <section class="bg-cream py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-sm font-medium tracking-wider text-rust uppercase mb-3">
+        GET IN TOUCH
+      </p>
+      <h2 class="font-serif text-3xl md:text-4xl text-navy tracking-tight mb-6">
+        Plan your stay
+      </h2>
+      <!-- PLACEHOLDER copy adapted from Mike's old site — confirm with Mike before launch -->
+      <p class="font-sans text-base md:text-lg text-stone leading-relaxed">
+        Listen to the waves from the deck, stroll miles of shoreline, watch eagles soar while seals bask on the rocks offshore. If Copes&rsquo; Islander sounds like your kind of quiet, reach out &mdash; Mike and Patti would love to help you plan your stay. We usually reply quickly.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-cream-warm py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <a href="tel:+12508976050" class="group flex flex-col items-center justify-center text-center bg-white border border-stone/15 px-6 py-10 min-h-[160px] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
+          <!-- icon slot: phone (pending icon set) -->
+          <p class="font-sans text-xs tracking-widest text-rust uppercase mb-2">Call</p>
+          <p class="font-serif text-2xl text-navy group-hover:text-rust transition-colors">(250) 897-6050</p>
+        </a>
+
+        <a href="sms:+12508976050" class="group flex flex-col items-center justify-center text-center bg-white border border-stone/15 px-6 py-10 min-h-[160px] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
+          <!-- icon slot: message (pending icon set) -->
+          <p class="font-sans text-xs tracking-widest text-rust uppercase mb-2">Text</p>
+          <p class="font-serif text-2xl text-navy group-hover:text-rust transition-colors">(250) 897-6050</p>
+        </a>
+
+        <a href="mailto:mike@bbvancouverisland-bc.com" class="group flex flex-col items-center justify-center text-center bg-white border border-stone/15 px-6 py-10 min-h-[160px] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
+          <!-- icon slot: mail (pending icon set) -->
+          <p class="font-sans text-xs tracking-widest text-rust uppercase mb-2">Email</p>
+          <p class="font-serif text-xl text-navy break-words group-hover:text-rust transition-colors">mike@bbvancouverisland-bc.com</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cream py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="font-serif text-2xl md:text-3xl text-navy tracking-tight mb-6">
+        Find us
+      </h2>
+      <p class="font-sans text-base text-stone leading-relaxed mb-10">
+        Copes&rsquo; Islander<br/>
+        1484 Wilkinson Road<br/>
+        Comox, BC V9M 4B3
+      </p>
+      <div class="max-w-md mx-auto">
+        <img
+          src="/dev/map-osm.png"
+          alt="Map showing Copes' Islander at 1484 Wilkinson Road, Comox, BC, on the coast near Little River"
+          class="w-full aspect-[1005/644] object-cover border-4 border-cream-warm shadow-md"
+        />
+        <a href="https://www.google.com/maps/search/?api=1&query=1484+Wilkinson+Rd+Comox+BC" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 font-sans text-sm text-navy hover:text-rust transition-colors underline underline-offset-4 decoration-stone/40 hover:decoration-rust">
+          Get directions &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
