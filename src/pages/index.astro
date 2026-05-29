@@ -116,14 +116,26 @@ import Layout from '../layouts/Layout.astro';
         A few minutes from the ferry, the winery, and the strait
       </h2>
       <div class="max-w-2xl mx-auto">
-        <img
-          src="/dev/map.PNG"
-          alt="Illustrated map showing Cope's Islander on the Strait of Georgia, near BC Ferries Little River Terminal and 40 Knots Winery"
-          class="w-full max-h-[500px] object-contain border-4 border-cream-warm shadow-md"
-        />
+        <div class="relative">
+          <img
+            src="/dev/map-osm.png"
+            alt="Map showing Copes' Islander at 1484 Wilkinson Road, Comox, BC, on the coast near Little River"
+            class="w-full aspect-[1005/644] object-cover border-4 border-cream-warm shadow-md"
+          />
+          {/* marker */}
+          <div class="absolute" style="left: 47.8%; top: 59.0%; transform: translate(-50%, -100%);">
+            <svg width="28" height="36" viewBox="0 0 28 36" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 2px 3px rgba(0,0,0,0.35));">
+              <path d="M14 0C6.3 0 0 6.3 0 14c0 10.5 14 22 14 22s14-11.5 14-22C28 6.3 21.7 0 14 0z" fill="#b8552c"/>
+              <circle cx="14" cy="14" r="5" fill="#f5f1e8"/>
+            </svg>
+          </div>
+        </div>
         <p class="font-sans text-sm text-stone italic text-center mt-4">
           Just off Wilkinson Road in the Comox Valley.
         </p>
+        <a href="https://www.google.com/maps/search/?api=1&query=1484+Wilkinson+Rd+Comox+BC" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 font-sans text-sm text-navy hover:text-rust transition-colors underline underline-offset-4 decoration-stone/40 hover:decoration-rust">
+          Get directions →
+        </a>
       </div>
     </div>
   </section>
