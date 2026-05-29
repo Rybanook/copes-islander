@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="The Location — Copes' Islander"
+  description="Copes' Islander sits on the shore at Little River in the Comox Valley, BC — minutes from the Powell River ferry, the airport, and downtown Courtenay and Comox."
+>
+
+  <section class="bg-cream py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-sm font-medium tracking-wider text-rust uppercase mb-3">
+        THE LOCATION
+      </p>
+      <h2 class="font-serif text-3xl md:text-4xl text-navy tracking-tight mb-6">
+        On the water at Little River
+      </h2>
+      <!-- PLACEHOLDER copy — confirm with Mike before launch -->
+      <p class="font-sans text-base md:text-lg text-stone leading-relaxed">
+        Copes&rsquo; Islander sits right on the shore at the north end of the Comox Valley, looking out across the Strait of Georgia to the Coast Mountains. Listen to the waves from the deck, watch eagles overhead and seals on the rocks offshore, and walk miles of quiet shoreline. The Little River ferry terminal and Comox Airport are both just minutes away, with downtown Courtenay and Comox a short drive south.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-cream-warm py-20 px-4">
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-white p-3 shadow-md">
+        <img
+          src="/dev/map-osm.png"
+          alt="Map showing Copes' Islander at 1484 Wilkinson Road, Comox, BC, on the coast near Little River"
+          class="block w-full h-auto border-4 border-cream-warm"
+        />
+      </div>
+      <div class="text-center">
+        <a href="https://www.google.com/maps/search/?api=1&query=1484+Wilkinson+Rd+Comox+BC" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 font-sans text-sm text-navy hover:text-rust transition-colors underline underline-offset-4 decoration-stone/40 hover:decoration-rust">
+          Get directions &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cream py-20 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-serif text-3xl md:text-4xl text-navy tracking-tight mb-10 text-center">
+        Getting here
+      </h2>
+      <!-- PLACEHOLDER directions — confirm exact turns with Mike before launch -->
+      <div class="space-y-8">
+        <div>
+          <p class="font-sans text-xs tracking-widest text-rust uppercase mb-3">From Highway 19 / 19A</p>
+          <p class="font-sans text-base text-stone leading-relaxed">
+            Follow the signs toward the Powell River (Little River) ferry. At the last intersection before the ferry terminal, turn left onto Wilkinson Road. We&rsquo;re the last house before the turn-around at the end of the road &mdash; 1484 Wilkinson.
+          </p>
+        </div>
+        <div>
+          <p class="font-sans text-xs tracking-widest text-rust uppercase mb-3">From Comox Airport</p>
+          <p class="font-sans text-base text-stone leading-relaxed">
+            Turn right onto Knight Road, then right at Pritchard Road. Follow Pritchard as it becomes Military Row and then Little River Road, past the airbase. At the last intersection before Little River Road meets the ocean, turn left onto Wilkinson and follow it to the end. We&rsquo;re the last house before the turn-around &mdash; 1484 Wilkinson.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cream-warm py-20 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-serif text-3xl md:text-4xl text-navy tracking-tight mb-10 text-center">
+        What&rsquo;s nearby
+      </h2>
+      <ul class="max-w-2xl mx-auto space-y-3 font-sans text-base text-stone list-disc list-inside leading-relaxed">
+        <li>Little River ferry terminal &mdash; minutes away, sailings to Powell River and the Sunshine Coast</li>
+        <li>Comox Valley Airport &mdash; just down the road</li>
+        <li>Downtown Courtenay &amp; Comox &mdash; a 10&ndash;15 minute drive</li>
+        <li>40 Knots Winery &mdash; nearby</li>
+      </ul>
+    </div>
+  </section>
+
+</Layout>
