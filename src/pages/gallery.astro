@@ -1,0 +1,135 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const photos = [
+  { src: '/dev/IMG_0284.JPG', alt: "Copes' Islander at golden hour, the property and shoreline" },
+  { src: '/dev/livingroom.JPG', alt: 'Living room with corner windows and ocean view' },
+  { src: '/dev/pink_sunset.JPG', alt: 'Pink sunset over the Strait of Georgia' },
+  { src: '/dev/bedroom.JPG', alt: 'Private bedroom in the Sea Lion Suite' },
+  { src: '/dev/steps_to_beach.JPG', alt: 'Steps down to the beach' },
+  { src: '/dev/IMG_0234.JPG', alt: 'Full kitchen with knotty pine cabinets' },
+  { src: '/dev/bluesky_water_grass.JPG', alt: 'Beach grass and ocean view under blue sky' },
+  { src: '/dev/IMG_0267.JPG', alt: 'The property seen from the garden' },
+  { src: '/dev/twilight_sky.JPG', alt: 'Twilight sky over the property and shoreline' },
+  { src: '/dev/IMG_0278.JPG', alt: 'Rocky shoreline below the property' },
+  { src: '/dev/BBQ.JPG', alt: 'Deck and BBQ overlooking the water' },
+];
+---
+
+<Layout
+  title="Gallery — Copes' Islander"
+  description="Photographs of Copes' Islander — the suite, the shoreline, and the view from the Comox Valley, BC."
+>
+
+  <section class="bg-cream py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-sm font-medium tracking-wider text-rust uppercase mb-3">
+        GALLERY
+      </p>
+      <h2 class="font-serif text-3xl md:text-4xl text-navy tracking-tight mb-6">
+        A look around
+      </h2>
+      <p class="font-sans text-base md:text-lg text-stone leading-relaxed">
+        A few moments from the suite, the shoreline, and the view.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-cream-warm py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="columns-1 sm:columns-2 lg:columns-3 gap-4">
+        {photos.map((photo, i) => (
+          <button
+            type="button"
+            class="gallery-thumb block w-full mb-4 break-inside-avoid cursor-pointer overflow-hidden rounded-lg hover:opacity-90 transition-opacity"
+            data-index={i}
+            aria-label={`Open photo ${i + 1}: ${photo.alt}`}
+          >
+            <img src={photo.src} alt={photo.alt} loading="lazy" class="w-full block" />
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div
+    id="lightbox"
+    class="fixed inset-0 z-[100] bg-black/90 items-center justify-center"
+    style="display: none;"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Photo viewer"
+  >
+    <button id="lb-close" type="button" class="absolute top-4 right-4 text-white/80 hover:text-white p-2" aria-label="Close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="6" y1="6" x2="18" y2="18" />
+        <line x1="18" y1="6" x2="6" y2="18" />
+      </svg>
+    </button>
+    <button id="lb-prev" type="button" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2" aria-label="Previous photo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6" />
+      </svg>
+    </button>
+    <button id="lb-next" type="button" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2" aria-label="Next photo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6" />
+      </svg>
+    </button>
+    <img id="lb-img" src="" alt="" class="max-w-[92vw] max-h-[88vh] object-contain" />
+  </div>
+
+  <script define:vars={{ photos }}>
+    let currentIndex = 0;
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+
+    function update() {
+      const p = photos[currentIndex];
+      lbImg.src = p.src;
+      lbImg.alt = p.alt;
+    }
+
+    function open(index) {
+      currentIndex = index;
+      update();
+      lightbox.style.display = 'flex';
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function close() {
+      lightbox.style.display = 'none';
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    function prev() {
+      currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+      update();
+    }
+
+    function next() {
+      currentIndex = (currentIndex + 1) % photos.length;
+      update();
+    }
+
+    document.querySelectorAll('.gallery-thumb').forEach((btn) => {
+      btn.addEventListener('click', () => open(parseInt(btn.dataset.index, 10)));
+    });
+
+    document.getElementById('lb-close').addEventListener('click', close);
+    document.getElementById('lb-prev').addEventListener('click', prev);
+    document.getElementById('lb-next').addEventListener('click', next);
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) close();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.style.display !== 'flex') return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') prev();
+      else if (e.key === 'ArrowRight') next();
+    });
+  </script>
+
+</Layout>
