@@ -53,6 +53,7 @@ for (const file of FILES) {
     outFile = 'Logo.png';
     pipeline = pipeline
       .rotate()
+      .trim()
       .resize({ width: 400, height: 400, fit: 'inside', withoutEnlargement: true })
       .png({ palette: true, quality: 80, compressionLevel: 9 });
   } else {
