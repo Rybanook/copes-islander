@@ -12,7 +12,7 @@ const MAX_DIMENSION = 1600;
 const JPEG_QUALITY = 80;
 
 const FILES = [
-  'Logo.jpg',
+  'logo2.png',
   'map-osm.png',
   'IMG_0284.JPG',
   'IMG_0278.JPG',
@@ -49,12 +49,12 @@ for (const file of FILES) {
   if (file === 'map-osm.png') {
     outFile = `${base}.png`;
     pipeline = pipeline.rotate().png({ palette: true, quality: 80, compressionLevel: 9 });
-  } else if (file === 'Logo.jpg') {
-    outFile = `${base}.jpg`;
+  } else if (file === 'logo2.png') {
+    outFile = 'Logo.png';
     pipeline = pipeline
       .rotate()
       .resize({ width: 400, height: 400, fit: 'inside', withoutEnlargement: true })
-      .jpeg({ quality: JPEG_QUALITY, mozjpeg: true });
+      .png({ palette: true, quality: 80, compressionLevel: 9 });
   } else {
     outFile = `${base}.jpg`;
     pipeline = pipeline
