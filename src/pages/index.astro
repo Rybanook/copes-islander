@@ -10,12 +10,15 @@ import Layout from '../layouts/Layout.astro';
     class="relative flex items-center justify-center min-h-[80vh] overflow-hidden"
     style="background-image: url('/photos/IMG_0284.jpg'); background-size: cover; background-position: center;"
   >
-    <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-black/30 to-black/50"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/40"></div>
     <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
       <h1 class="font-serif text-6xl md:text-7xl tracking-tight text-cream-warm leading-[1.1] [text-shadow:0_2px_6px_rgba(0,0,0,0.6)]">
         Oceanfront. Unparalleled Coastal Views.
       </h1>
-      <p class="font-sans text-lg md:text-xl text-cream-warm mt-6 [text-shadow:0_2px_8px_rgba(0,0,0,0.7)]">
+      <p
+        class="inline-block max-w-2xl px-8 py-6 font-sans text-lg md:text-xl text-cream-warm mt-6 [text-shadow:0_2px_12px_rgba(0,0,0,0.85)]"
+        style="background: radial-gradient(ellipse at center, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0) 80%);"
+      >
         A Vancouver Island seaside retreat in the Comox Valley. One bedroom suite with full kitchen, living room, and oceanfront patio.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
@@ -49,7 +52,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <!-- Two-column composition: hosts left (larger), polaroids right (smaller) -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-x-12 gap-y-12 items-start">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-x-12 gap-y-12 items-center">
 
         <!-- LEFT COLUMN: hosts paragraph (md:col-span-7) -->
         <div class="md:col-span-7">
@@ -57,8 +60,12 @@ import Layout from '../layouts/Layout.astro';
           <!-- Hosts paragraph -->
           <div class="max-w-md mx-auto px-2">
             <p class="font-serif italic text-lg text-navy leading-relaxed">
-              We&rsquo;re Mike and Patti &mdash; hosts at Copes&rsquo; Islander since 1996. The day jobs are behind us, the kids are grown and gone, but we&rsquo;re still here by the ocean. Welcoming guests from around the world has been a pleasure we&rsquo;ve never tired of.
+              We&rsquo;re Mike and Patti &mdash; hosts at Copes&rsquo; Islander since 1996. Welcoming guests from around the world has been a pleasure we&rsquo;ve never tired of.
             </p>
+            <p class="font-serif italic text-2xl md:text-3xl text-rust mt-8">&mdash; Mike &amp; Patti</p>
+            <svg width="180" height="14" viewBox="0 0 180 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mt-2" aria-hidden="true">
+              <path d="M2 7 Q 24 1, 46 7 T 90 7 T 134 7 T 178 7" stroke="#b8552c" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
           </div>
 
         </div>

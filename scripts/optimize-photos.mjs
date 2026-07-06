@@ -26,6 +26,8 @@ const FILES = [
   'pink_sunset.JPG',
   'bluesky_water_grass.JPG',
   'BBQ.JPG',
+  'bathroom.JPG',
+  'coast_mountains.JPG',
 ];
 
 function formatBytes(b) {
